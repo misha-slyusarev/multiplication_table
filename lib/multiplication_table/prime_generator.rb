@@ -13,7 +13,6 @@ class MultiplicationTable::PrimeGenerator
   private
 
     def prime?(n)
-      false unless n > 1
       (2..n/2).none?{|i| n % i == 0}
     end
 end
