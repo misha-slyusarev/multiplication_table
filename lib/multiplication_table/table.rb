@@ -10,7 +10,7 @@ class MultiplicationTable::Table
     end
 
     sequence = @generator.get(length)
-    @column_width = Math.log10(length**2).ceil + 1
+    @column_width = Math.log10(sequence.last**2).ceil
 
     puts sequence.reduce(' ' *  @column_width) {|l, x| l << ' ' << adjust(x)}
 
