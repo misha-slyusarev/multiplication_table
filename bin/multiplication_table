@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path(File.dirname(__FILE__) + '/../lib')
+$LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
+
+require 'multiplication_table'
+
+generator = MultiplicationTable::PrimeGenerator.new
+table = MultiplicationTable::Table.new(generator)
+
+args = ARGV.dup
+ARGV.clear
+
+if args.empty?
+  table.print_out(10)
+else
+  sequence_length = args.shift.to_i
+  table.print_out(sequence_length)
+end
