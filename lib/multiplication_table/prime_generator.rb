@@ -1,14 +1,13 @@
 class MultiplicationTable::PrimeGenerator
-  def initialize(first = 1)
-    @current = first
-  end
-
-  def next
-    @current += 1
-    until prime?(@current) do
-      @current += 1
+  def get(length)
+    current = 1
+    (1..length).map do
+      loop do
+        current += 1
+        break if prime?(current)
+      end
+      current
     end
-    @current
   end
 
   private
