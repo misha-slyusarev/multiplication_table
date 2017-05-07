@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'generator_spec'
 
 RSpec.describe MultiplicationTable::PrimeGenerator do
   it_behaves_like 'a generator'
