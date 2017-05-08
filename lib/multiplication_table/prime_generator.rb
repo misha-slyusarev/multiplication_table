@@ -15,6 +15,6 @@ class MultiplicationTable::PrimeGenerator
   private
 
     def prime?(n)
-      (2..n/2).none?{|i| n % i == 0}
+      (2..Math.sqrt(n)).none?{|i| n % i == 0}
     end
 end
