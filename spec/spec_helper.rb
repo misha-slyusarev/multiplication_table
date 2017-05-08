@@ -1,5 +1,5 @@
-require "bundler/setup"
-require "multiplication_table"
+require 'bundler/setup'
+require 'multiplication_table'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
