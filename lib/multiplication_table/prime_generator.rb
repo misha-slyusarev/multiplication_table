@@ -1,7 +1,9 @@
 class MultiplicationTable::PrimeGenerator
   def get(length)
+    return [] if length < 1
+
     current = 1
-    (1..length).map do
+    length.times.map do
       loop do
         current += 1
         break if prime?(current)
